@@ -190,7 +190,7 @@ function handleClientEvent(ws: WebSocket, event: ClientEvent) {
       }
       const el = event.element;
       room.elements[el.id] = el;
-      broadcastToRoom(roomId, { type: 'element:created', element: el }, ws);
+      broadcastToRoom(roomId, { type: 'element:created', element: el });
       break;
     }
 
@@ -219,15 +219,11 @@ function handleClientEvent(ws: WebSocket, event: ClientEvent) {
         updatedAt: Date.now(),
       };
 
-      broadcastToRoom(
-        roomId,
-        {
-          type: 'element:updated',
-          elementId: event.elementId,
-          changes: event.changes,
-        },
-        ws
-      );
+      broadcastToRoom(roomId, {
+        type: 'element:updated',
+        elementId: event.elementId,
+        changes: event.changes,
+      });
       break;
     }
 
