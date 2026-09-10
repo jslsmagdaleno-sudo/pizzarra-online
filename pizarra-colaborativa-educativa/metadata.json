@@ -1,0 +1,6 @@
+{
+  "name": "Pizarra Colaborativa Educativa",
+  "description": "Pizarra digital colaborativa en tiempo real para clases escolares en línea sin registro, con actividades educativas interactivas y control docente.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
