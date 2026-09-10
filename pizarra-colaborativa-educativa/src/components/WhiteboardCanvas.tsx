@@ -795,6 +795,7 @@ export const WhiteboardCanvas: React.FC<WhiteboardCanvasProps> = ({
           <div
             className="absolute pointer-events-auto z-40"
             style={{ left: textInputPos.x, top: textInputPos.y }}
+            onPointerDown={(e) => e.stopPropagation()}
           >
             <input
               type="text"
