@@ -19,7 +19,7 @@ import { DEFAULT_ACTIVITIES } from './src/data/defaultActivities';
 
 const app = express();
 const server = http.createServer(app);
-const PORT = 3000;
+const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 app.use(express.json({ limit: '10mb' }));
 
